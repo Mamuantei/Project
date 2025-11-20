@@ -1,0 +1,11 @@
+project/
+  server.js
+  package.json
+  .env
+  taskearn.db
+  uploads/
+  public/
+    index.html
+    styles.css
+    app.js
+    
