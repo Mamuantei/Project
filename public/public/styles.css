@@ -1,0 +1,89 @@
+/* styles.css - luxurious look */
+:root{
+  --bg:#0b0f15;
+  --card:#071022;
+  --muted:#9aa6b2;
+  --accent:#ffd166;
+  --accent-2:#60a5fa;
+  --glass: rgba(255,255,255,0.03);
+  --radius:14px;
+  --shadow: 0 12px 40px rgba(2,6,23,0.6);
+  --glass-2: rgba(255,255,255,0.02);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html,body,#app{height:100%;margin:0;background:
+  radial-gradient(800px 400px at 10% 5%, rgba(96,165,250,0.06), transparent 6%),
+  linear-gradient(180deg,#03040a 0%, #071022 100%);font-size:16px;color:#e8eef6}
+.container{max-width:1100px;margin:24px auto;padding:20px}
+
+/* Top bar */
+.topbar{
+  width:100%;display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);
+  border-radius:12px;margin:14px auto 0;max-width:1100px;box-shadow:var(--shadow);
+}
+.brand{font-weight:700;font-size:20px}
+.brand .accent{color:var(--accent)}
+.top-actions{display:flex;align-items:center;gap:12px}
+.balance{font-weight:700;color:var(--accent);background:transparent;padding:8px 12px;border-radius:10px}
+.btn{padding:8px 12px;border-radius:10px;border:none;background:rgba(255,255,255,0.03);color:inherit;cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#001}
+
+/* Main content area inside SPA */
+.view-card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;padding:20px;margin-top:18px;box-shadow:0 10px 30px rgba(2,6,23,.6)
+}
+
+/* Home hero */
+.hero{
+  display:flex;gap:20px;align-items:center;
+  padding:28px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(96,165,250,0.02));
+}
+.hero .left{flex:1}
+.hero h1{margin:0;font-size:28px}
+.hero p{color:var(--muted);margin-top:8px}
+.hero .cta {margin-top:14px}
+.hero .hero-visual{width:220px;height:120px;background:linear-gradient(135deg,rgba(255,209,102,0.15),rgba(96,165,250,0.12));border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+
+/* Task list */
+.tasks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
+.task-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.03));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+.task-card h3{margin:0;font-size:18px}
+.task-card p{color:var(--muted);margin:8px 0}
+.task-meta{display:flex;justify-content:space-between;align-items:center}
+.tag{background:rgba(255,255,255,0.02);padding:6px 8px;border-radius:999px;color:var(--muted);font-size:13px}
+.task-actions{display:flex;gap:8px;margin-top:10px;align-items:center}
+
+/* submit form */
+.submit-form{display:flex;flex-direction:column;gap:12px}
+.input, textarea{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit}
+.file-list{display:flex;flex-direction:column;gap:8px}
+.small-muted{font-size:13px;color:var(--muted)}
+
+/* bottom nav */
+.bottom-nav{
+  position:fixed;left:50%;transform:translateX(-50%);bottom:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
+  padding:8px;border-radius:40px;display:flex;gap:6px;box-shadow:0 10px 30px rgba(2,6,23,0.5);
+}
+.nav-btn{background:transparent;border:none;padding:10px 16px;border-radius:999px;color:var(--muted);cursor:pointer}
+.nav-btn.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#001;font-weight:700}
+
+/* modal and toast */
+.modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.6);display:flex;align-items:center;justify-content:center;z-index:50}
+.modal-card{background:var(--card);padding:18px;border-radius:12px;max-width:720px;width:95%}
+.toast{position:fixed;right:18px;top:18px;background:#062031;padding:12px 16px;border-radius:12px;color:var(--accent);box-shadow:0 8px 24px rgba(0,0,0,0.6);z-index:60}
+
+/* account page */
+.account-row{display:flex;gap:18px;align-items:center}
+.avatar{width:72px;height:72px;border-radius:12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#041}
+
+/* responsive adjustments */
+@media (max-width:760px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .topbar{padding:12px}
+  .container{padding:12px}
+  .bottom-nav{left:50%;transform:translateX(-50%);bottom:12px}
+                   }
+           
