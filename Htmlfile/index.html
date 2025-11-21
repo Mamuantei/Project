@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TaskEarn — Earn by Doing Tasks</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">Task<span class="accent">Earn</span></div>
+      <div class="top-actions">
+        <div id="balanceDisplay" class="balance">₹0.00</div>
+        <button id="btnLogin" class="btn primary">Sign in</button>
+      </div>
+    </header>
+
+    <main id="view" class="container"></main>
+
+    <nav class="bottom-nav">
+      <button class="nav-btn" data-route="#/home" id="navHome">Home</button>
+      <button class="nav-btn" data-route="#/tasks" id="navTasks">Tasks</button>
+      <button class="nav-btn" data-route="#/submit" id="navSubmit">Submit</button>
+      <button class="nav-btn" data-route="#/account" id="navAccount">Account</button>
+    </nav>
+
+    <!-- global modal -->
+    <div id="modal" class="modal-backdrop" style="display:none">
+      <div class="modal-card" id="modalCard"></div>
+    </div>
+
+    <!-- simple notifications -->
+    <div id="toast" class="toast" style="display:none"></div>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+      </html>
+      
